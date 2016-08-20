@@ -1,7 +1,7 @@
 {
   "name": "semver-aas",
   "version": "1.0.0",
-  "description": "Thin http wrapper around semver.satisfies() for when you have curl but not node.",
+  "description": "SemVer as a Service - A thin http wrapper around semver.satisfies() for when you have curl but not node.",
   "main": "index.js",
   "scripts": {
     "pretest": "eslint *.js",
@@ -14,12 +14,16 @@
   "author": "Ryan Graham <r.m.graham@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/strongloop/satisfies/issues"
+    "url": "https://github.com/strongloop/semver-aas/issues"
   },
-  "homepage": "https://github.com/strongloop/satisfies#readme",
+  "homepage": "https://github.com/strongloop/semver-aas#readme",
+  "dependencies": {
+    "semver": "^5.1.0"
+  },
   "devDependencies": {
     "eslint": "^2.13.1",
     "eslint-config-strongloop": "^2.0.1",
-    "tap": "^5.7.3"
+    "supertest": "^2.0.0",
+    "tap": "^6.3.2"
   }
 }
