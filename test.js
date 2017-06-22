@@ -32,7 +32,7 @@ test('single (validation)', function(t) {
 });
 
 test('single (range query)', function(t) {
-  t.plan(9);
+  t.plan(10);
 
   request(handler).get('/1.2.3?q=1')
     .expect('Content-Type', /json/)
@@ -57,6 +57,11 @@ test('single (range query)', function(t) {
   request(handler).get('/1.2.3', {q: '1 || 2 || 4.3.2'})
     .expect('Content-Type', /json/)
     .expect(200, JSON.stringify('1.2.3'))
+    .end(t.ifErr);
+
+  request(handler).get('/6.0.0', {q: '>= 0.6 <= 6'})
+    .expect('Content-Type', /json/)
+    .expect(200, JSON.stringify('6.0.0'))
     .end(t.ifErr);
 
   request(handler).get('/1.2.3?q=^1')

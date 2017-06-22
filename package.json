@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "SemVer as a Service - A thin http wrapper around semver.satisfies() for when you have curl but not node.",
   "main": "index.js",
+  "engines": {
+    "node": "8"
+  },
   "scripts": {
     "pretest": "eslint *.js",
     "test": "tap --coverage test.js"
@@ -23,7 +26,7 @@
   "devDependencies": {
     "eslint": "^2.13.1",
     "eslint-config-strongloop": "^2.0.1",
-    "supertest": "^2.0.0",
-    "tap": "^6.3.2"
+    "supertest": "^3.0.0",
+    "tap": "^10.0.0"
   }
 }
