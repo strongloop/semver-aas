@@ -4,7 +4,7 @@
   "description": "SemVer as a Service - A thin http wrapper around semver.satisfies() for when you have curl but not node.",
   "main": "index.js",
   "engines": {
-    "node": "8"
+    "node": ">=8"
   },
   "scripts": {
     "pretest": "eslint *.js",
